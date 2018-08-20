@@ -24,4 +24,10 @@ public class AnimeController {
 	public Optional<Anime> getAnime(@PathVariable int id) {
 		return animeService.getAnime(id);
 	}
+	
+	@RequestMapping(method=RequestMethod.DELETE,value="/deleteAnime/{id}")
+	public String deleteAnime(@PathVariable int id) {
+		 animeService.deleteAnime(id);
+		 return "Anime deleted";
+	}
 }

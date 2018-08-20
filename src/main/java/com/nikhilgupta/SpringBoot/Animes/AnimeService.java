@@ -19,4 +19,8 @@ public class AnimeService {
 	public Optional<Anime> getAnime(int id) {
 		return animeCouchController.findById(id);
 	}
+	
+	public void deleteAnime(int id) {
+		animeCouchController.deleteById(id);
+	}
 }
