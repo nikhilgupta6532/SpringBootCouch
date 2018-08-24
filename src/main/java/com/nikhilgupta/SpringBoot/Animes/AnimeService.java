@@ -23,4 +23,8 @@ public class AnimeService {
 	public void deleteAnime(int id) {
 		animeCouchController.deleteById(id);
 	}
+	
+	public Iterable<Anime> getAllAnimes(){
+		return animeCouchController.findAll();
+	}
 }

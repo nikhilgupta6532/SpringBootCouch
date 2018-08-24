@@ -30,4 +30,9 @@ public class AnimeController {
 		 animeService.deleteAnime(id);
 		 return "Anime deleted";
 	}
+	
+	@RequestMapping("/anime")
+	public Iterable<Anime> getAllAnimes() {
+		return animeService.getAllAnimes();
+	}
 }
